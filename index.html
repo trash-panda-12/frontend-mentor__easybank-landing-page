@@ -6,56 +6,254 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Stats Preview card by FrontendMentor">
 	<link rel="stylesheet" href="./styles.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
-	<title>Tailwind CSS Template</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+	<title>Easybank Landing Page</title>
 </head>
+
 <body>
-	<section class="flex items-center min-h-screen px-8 py-24 bg-gradient-to-br from-purple-900 via-indigo-900 to-dark-blue">
-		<div class="container w-full h-full max-w-screen-lg px-0 overflow-hidden shadow-xl bg-secondary rounded-xl">
-			<div class="grid grid-cols-1">
-				<div class="order-last p-12 text-center sm:p-20 2xl:p-24 lg:order-first md:text-left">
-					<h1 class="text-3xl font-bold text-white sm:text-4xl">
-						<span class="text-primary"> TailwindCSS</span> Template
-					</h1>
 
-					<div class="mt-4 sm:mt-8">
-						<p class="leading-relaxed text-white opacity-75 sm:text-lg">
-              General template to help people try out TailwindCSS with customizations and plugins without the faff of setting up postCSS and other compilers. Pretty useful for quick static builds too. Left in some of my own tailwind customizations to help get you started. Check out the <a class="underline transition-colors focus:text-primary hover:text-primary" href="https://tailwindcss.com/"> Tailwind docs</a>. Parts of this design are from a <a class="underline transition-colors focus:text-primary hover:text-primary" href="https://www.frontendmentor.io"> FrontendMentor</a> challenge
-						</p>
-					</div>
 
-					<ul class="justify-between mt-8 space-y-8 cursor-default sm:mt-16 md:flex md:space-y-0">
-						<li class="flex flex-col-reverse space-y-reverse sm:space-y-2 group">
-              <p class="text-white uppercase sm:text-lg opacity-60 font-secondary">
-                Placeholder
-              </p>
-							<p class="text-2xl font-semibold text-white transition-colors sm:text-3xl group-hover:text-primary">
-								12k+
-							</p>
-						</li>
+	<header class="absolute z-50 w-full bg-white shadow">
+    <div class="">
+      <div class="container">
+        <div class="flex justify-between">
+          <div class="flex items-center flex-shrink-0 py-2">
+            <img src="./images/logo.svg" alt="" class="h-auto w-44">
+          </div>
 
-						<li class="flex flex-col-reverse space-y-reverse sm:space-y-2 group">
-              <p class="text-white uppercase sm:text-lg opacity-60 font-secondary">
-                Placeholder
-              </p>
-							<p class="text-2xl font-semibold text-white transition-colors sm:text-3xl group-hover:text-primary">
-								314
-							</p>
-						</li>
+          <ul class="flex justify-center w-full space-x-8 ">
+            <li class="h-full">
+              <a href="" class="flex items-center h-full transition-all border-b-4 border-white hover:border-red-500">
+                Contact
+              </a>
+            </li>
+            <li class="h-full">
+              <a href="" class="flex items-center h-full transition-all border-b-4 border-white hover:border-red-500">
+                Contact
+              </a>
+            </li>
+            <li class="h-full">
+              <a href="" class="flex items-center h-full transition-all border-b-4 border-white hover:border-red-500">
+                Contact
+              </a>
+            </li>
+            <li class="h-full">
+              <a href="" class="flex items-center h-full transition-all border-b-4 border-white hover:border-red-500">
+                Contact
+              </a>
+            </li>
+            <li class="h-full">
+              <a href="" class="flex items-center h-full transition-all border-b-4 border-white hover:border-red-500">
+                Contact
+              </a>
+            </li>
 
-						<li class="flex flex-col-reverse space-y-reverse sm:space-y-2 group">
-              <p class="text-white uppercase sm:text-lg opacity-60 font-secondary">
-                Placeholder
-              </p>
-							<p class="text-2xl font-semibold text-white transition-colors sm:text-3xl group-hover:text-primary">
-								12M+
-							</p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
+          </ul>
+
+
+          <div class="flex-shrink-0 py-2">
+            <button class="button">
+              Request Invite
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="relative overflow-hidden bg-brand-grey-light min-h-70vh">
+    <div class="relative bg-brand-grey-light min-h-70vh hero-section">
+
+      <div class="absolute inset-0 z-10 w-7/12 h-full ml-auto hero-mockup">
+        <div class="relative w-full h-full max-w-3xl ml-auto transform translate-x-24 -translate-y-12 2xl:max-w-4xl 2xl:mr-auto 2xl:ml-0">
+          <img class="w-full h-auto object-fit filter drop-shadow-xl" src="/images/image-mockups.png" alt="">
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="w-5/12 pt-12 pr-12">
+          <div class="py-48 space-y-6 font-light">
+            <h1 class="text-6xl text-brand-blue-dark">
+              Next generation digital banking
+            </h1>
+
+            <p class="text-brand-grey-dark">
+              Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more
+            </p>
+
+            <button class="button">
+              Request Invite
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="relative py-24 bg-brand-grey">
+      <div class="container">
+        <div class="max-w-2xl space-y-6">
+          <h2 class="text-5xl font-light text-brand-blue-dark">
+            Why choose Easybank?
+          </h2>
+          <p class="text-brand-grey-dark">
+            We can leverage Open Banking to turn your bank acocunt into your financial hub. <br>
+            Control your finances like never before.
+          </p>
+        </div>
+
+
+        <ul class="grid grid-cols-4 gap-8 my-16">
+          <li class="space-y-6">
+            <img src="./images/icon-api.svg" class="w-auto h-26" alt="">
+            <h3 class="text-4xl font-light text-brand-blue-dark">
+              Online Banking
+            </h3>
+            <p class="text-brand-grey-dark">
+              Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.
+            </p>
+          </li>
+
+          <li class="space-y-6">
+            <img src="./images/icon-api.svg" class="w-auto h-26" alt="">
+            <h3 class="text-4xl font-light text-brand-blue-dark">
+              Online Banking
+            </h3>
+            <p class="text-brand-grey-dark">
+              Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.
+            </p>
+          </li>
+
+          <li class="space-y-6">
+            <img src="./images/icon-api.svg" class="w-auto h-26" alt="">
+            <h3 class="text-4xl font-light text-brand-blue-dark">
+              Online Banking
+            </h3>
+            <p class="text-brand-grey-dark">
+              Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.
+            </p>
+          </li>
+
+          <li class="space-y-6">
+            <img src="./images/icon-api.svg" class="w-auto h-26" alt="">
+            <h3 class="text-4xl font-light text-brand-blue-dark">
+              Online Banking
+            </h3>
+            <p class="text-brand-grey-dark">
+              Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+
+
+
+
+  <section class="py-24 bg-brand-grey-light">
+    <div class="container">
+      <h2 class="text-5xl font-light text-brand-blue-dark">
+        Latest Articles
+      </h2>
+
+      <div class="grid grid-cols-4 gap-4 pt-12">
+        <div class="news-card">
+          <div class="news-card__image">
+            <img src="./images/image-currency.jpg" alt="">
+          </div>
+
+          <div class="news-card__content">
+            <p class="news-card__author">
+              By Clare Robinson
+            </p>
+
+            <h3 class="news-card__title">
+              Recieve money in any currency with no fees
+            </h3>
+
+            <p class="news-card__text">
+              The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="py-12 bg-brand-blue-dark">
+    <div class="container">
+      <div class="grid grid-cols-12 gap-8">
+        <div class="flex flex-col justify-between col-span-3">
+          <img src="./images/footer-logo.svg" class="object-cover w-48 h-auto" alt="">
+
+          <div class="flex space-x-4">
+            <img src="./images/icon-facebook.svg" class="w-6 h-auto" alt="">
+            <img src="./images/icon-youtube.svg" class="w-6 h-auto" alt="">
+            <img src="./images/icon-twitter.svg" class="w-6 h-auto" alt="">
+            <img src="./images/icon-pinterest.svg" class="w-6 h-auto" alt="">
+            <img src="./images/icon-instagram.svg" class="w-6 h-auto" alt="">
+          </div>
+        </div>
+
+        <div class="col-span-6">
+          <div class="flex space-x-16 font-light">
+            <ul class="space-y-4">
+              <li class="text-white">
+                About us
+              </li>
+              <li class="text-white">
+                Content
+              </li>
+              <li class="text-white">
+                Blog
+              </li>
+            </ul>
+
+            <ul class="space-y-4">
+              <li class="text-white">
+                About us
+              </li>
+              <li class="text-white">
+                Content
+              </li>
+              <li class="text-white">
+                Blog
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="flex flex-col justify-between col-span-3">
+          <div class="text-right">
+            <button class="button">
+              Request Invite
+            </button>
+          </div>
+
+          <p class="text-right text-brand-grey-dark">
+            &copy; Easybank. All rights reserved
+          </p>
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </footer>
+
+
+
 </body>
 </html>
