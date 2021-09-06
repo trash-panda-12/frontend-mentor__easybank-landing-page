@@ -5,12 +5,10 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename')
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat')
-const sourcemaps = require('gulp-sourcemaps')
 const tailwindcss = require('tailwindcss')
-const postcssClean = require('postcss-clean')
-const postcssImport = require('postcss-import')
 const autoprefixer = require('autoprefixer')
 const postcssPresetEnv = require('postcss-preset-env')
+const webpack = require('webpack-stream')
 
 function styles() {
   let plugins = [
@@ -49,13 +47,22 @@ function reload(done) {
   done();
 };
 
+function repack() {
+  return gulp.src('./js/application.js')
+  .pipe(webpack({
+  }))
+  .pipe(rename('packed.js'))
+  .pipe(gulp.dest('./dist'));
+}
+
 function watchFiles(done) {
   gulp.watch('*.html', reload);
   gulp.watch('./css/**/*.scss', gulp.series(styles,reload));
   gulp.watch('./tailwind.config.js', gulp.series(styles,reload));
-  gulp.watch('./js/*.js', reload)
+  gulp.watch('./js/*.js', gulp.series(repack, reload))
 };
 
 // Spin up server & watch files
 exports.styles = styles
+exports.repack = repack
 exports.default = gulp.parallel(server, watchFiles);

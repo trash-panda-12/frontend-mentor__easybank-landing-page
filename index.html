@@ -11,61 +11,114 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
+  <script defer src="./dist/packed.js"></script>
 	<title>Easybank Landing Page</title>
 </head>
 
-<body>
+<body x-data="{ mobileNav: false }">
 
+  <div
+    class="fixed z-30 w-screen h-screen transition-all duration-200 bg-gradient-to-b from-brand-blue-dark to-brand-grey-dark"
+    :class=" { 'opacity-0 pointer-events-none' : !mobileNav, 'opacity-100' : mobileNav} "
+  ></div>
 
-	<header class="absolute z-50 w-full bg-white shadow">
+	<header class="absolute z-50 w-full bg-white shadow" >
     <div class="">
       <div class="container">
         <div class="flex justify-between">
-          <div class="flex items-center flex-shrink-0 py-2">
+          <div class="flex items-center flex-shrink-0 py-6">
             <img src="./images/logo.svg" alt="" class="h-auto w-44">
           </div>
 
-          <ul class="flex justify-center w-full space-x-8 ">
-            <li class="h-full">
-              <a href="" class="flex items-center h-full transition-all border-b-4 border-white hover:border-red-500">
-                Contact
+          <ul class="justify-center hidden w-full space-x-8 lg:flex">
+            <li class="header-link">
+              <a href="" class="header-link__link">
+                Home
               </a>
+
+              <span class="header-link__underline"></span>
             </li>
-            <li class="h-full">
-              <a href="" class="flex items-center h-full transition-all border-b-4 border-white hover:border-red-500">
-                Contact
+            <li class="header-link">
+              <a href="" class="header-link__link">
+                About
               </a>
+
+              <span class="header-link__underline"></span>
             </li>
-            <li class="h-full">
-              <a href="" class="flex items-center h-full transition-all border-b-4 border-white hover:border-red-500">
+            <li class="header-link">
+              <a href="" class="header-link__link">
                 Contact
               </a>
+
+              <span class="header-link__underline"></span>
             </li>
-            <li class="h-full">
-              <a href="" class="flex items-center h-full transition-all border-b-4 border-white hover:border-red-500">
-                Contact
+            <li class="header-link">
+              <a href="" class="header-link__link">
+                Blog
               </a>
+
+              <span class="header-link__underline"></span>
             </li>
-            <li class="h-full">
-              <a href="" class="flex items-center h-full transition-all border-b-4 border-white hover:border-red-500">
-                Contact
+            <li class="header-link">
+              <a href="" class="header-link__link">
+                Careers
               </a>
+
+              <span class="header-link__underline"></span>
             </li>
 
           </ul>
 
-
-          <div class="flex-shrink-0 py-2">
+          <div class="items-center flex-shrink-0 hidden py-2 lg:flex">
             <button class="button">
               Request Invite
             </button>
           </div>
+
+
+          <div class="flex items-center">
+            <button class="relative z-40 w-12 outline-none focus:outline-none ring-0 focus:ring-0 nav-button lg:hidden" @click="mobileNav = !mobileNav" :class="{ 'active' : mobileNav }">
+              <span class="line line-1"></span>
+              <span class="line line-2"></span>
+              <span class="line line-3"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 w-full transition-opacity duration-200 transform translate-y-full opacity-0"
+      :class=" { 'opacity-0 pointer-events-none' : !mobileNav, 'opacity-100' : mobileNav} "
+    >
+      <div class="p-8 ">
+        <div class="w-full h-full py-8 rounded-lg shadow-xl bg-brand-grey">
+          <ul class="space-y-8">
+            <li class="text-2xl text-center transition-colors text-brand-blue-dark hover:text-brand-green">
+              <a href="/">Home</a>
+            </li>
+            <li class="text-2xl text-center transition-colors text-brand-blue-dark hover:text-brand-green">
+              <a href="/">About</a>
+            </li>
+            <li class="text-2xl text-center transition-colors text-brand-blue-dark hover:text-brand-green">
+              <a href="/">Contact</a>
+            </li>
+            <li class="text-2xl text-center transition-colors text-brand-blue-dark hover:text-brand-green">
+              <a href="/">Blog</a>
+            </li>
+            <li class="text-2xl text-center transition-colors text-brand-blue-dark hover:text-brand-green">
+              <a href="/">Careers</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </header>
 
 
+
+
+  <!--
   <section class="relative overflow-hidden bg-brand-grey-light min-h-70vh">
     <div class="relative bg-brand-grey-light min-h-70vh hero-section">
 
@@ -153,9 +206,6 @@
       </div>
     </section>
   </section>
-
-
-
 
 
   <section class="py-24 bg-brand-grey-light">
@@ -252,6 +302,8 @@
 
 
   </footer>
+   -->
+
 
 
 

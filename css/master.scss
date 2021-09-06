@@ -6,7 +6,7 @@ body {
 
 
 .button {
-  @apply w-48 px-6 py-2 bg-gradient-to-br from-brand-green to-brand-blue rounded-full text-white transition-all;
+  @apply w-48 px-6 py-3 bg-gradient-to-br from-brand-green to-brand-blue rounded-full text-white transition-all;
 
   &:hover {
     @apply shadow-inner;
@@ -14,8 +14,6 @@ body {
 }
 
 .hero-section {
-
-
   &:before {
     position: absolute;
     content: '';
@@ -62,4 +60,64 @@ body {
     @apply text-sm font-light text-brand-grey-dark
   }
 
+}
+
+
+.header-link {
+
+  @apply relative h-full overflow-hidden py-4;
+
+  &__link {
+    @apply flex items-center h-full transition-all px-2;
+  }
+
+  &__underline {
+    @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-green to-brand-blue transition-all transform -translate-x-full;
+  }
+
+  &:hover {
+    .header-link__underline {
+      @apply translate-x-0
+    }
+  }
+
+}
+
+
+
+.nav-button {
+
+  &:focus, &:hover {
+    .line {
+      background-color: theme('colors.brand.green.DEFAULT');
+    }
+  }
+
+  .line {
+    background-color: theme('colors.brand.blue.dark');
+    height:5px;
+    display:block;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .line-1 {
+    width: 60%;
+    margin-left: auto
+  }
+
+  .line-2 {
+    margin: 6px 0;
+  }
+
+  .line-3 {
+    width: 60%;
+    margin-right: auto;
+  }
+
+  &.active {
+    .line-1, .line-2, .line-3 {
+      width:100%;
+    }
+  }
 }
