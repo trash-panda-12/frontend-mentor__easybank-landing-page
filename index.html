@@ -117,41 +117,45 @@
 
 
 
+  <section class="relative lg:overflow-hidden bg-brand-grey-light min-h-70vh">
+    <div class="relative flex flex-col bg-brand-grey-light min-h-70vh hero-section lg:block">
 
-  <!--
-  <section class="relative overflow-hidden bg-brand-grey-light min-h-70vh">
-    <div class="relative bg-brand-grey-light min-h-70vh hero-section">
+      <div class="relative inset-0 z-10 w-full h-full ml-auto lg:absolute lg:w-7/12 hero-mockup">
 
-      <div class="absolute inset-0 z-10 w-7/12 h-full ml-auto hero-mockup">
-        <div class="relative w-full h-full max-w-3xl ml-auto transform translate-x-24 -translate-y-12 2xl:max-w-4xl 2xl:mr-auto 2xl:ml-0">
-          <img class="w-full h-auto object-fit filter drop-shadow-xl" src="/images/image-mockups.png" alt="">
+        <div class="relative z-10 object-bottom w-full h-full max-w-md ml-auto mr-auto transform -translate-y-12 lg:mr-0 lg:max-w-3xl lg:translate-x-24 2xl:max-w-4xl 2xl:mr-auto 2xl:ml-0">
+          <img class="relative z-10 w-auto h-auto lg:w-full object-fit filter drop-shadow-xl" src="/images/image-mockups.png" alt="">
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full h-full" style="max-height: 740px;">
+          <img src="./images/bg-intro-mobile.svg" class="absolute bottom-0 object-cover w-full h-full lg:hidden" alt="">
         </div>
       </div>
 
-
       <div class="container">
-        <div class="w-5/12 pt-12 pr-12">
-          <div class="py-48 space-y-6 font-light">
-            <h1 class="text-6xl text-brand-blue-dark">
+        <div class="w-full lg:pt-12 lg:pr-12 lg:w-5/12">
+          <div class="pb-24 space-y-6 font-light lg:py-48">
+            <h1 class="text-4xl text-center sm:text-5xl lg:text-left lg:text-6xl text-brand-blue-dark">
               Next generation digital banking
             </h1>
 
-            <p class="text-brand-grey-dark">
+            <p class="text-center text-brand-grey-dark lg:text-left">
               Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more
             </p>
 
-            <button class="button">
-              Request Invite
-            </button>
+            <div class="text-center lg:text-left">
+              <button class="button">
+                Request Invite
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
 
-    <section class="relative py-24 bg-brand-grey">
+    <section class="relative py-16 lg:py-24 bg-brand-grey">
       <div class="container">
-        <div class="max-w-2xl space-y-6">
+        <div class="max-w-2xl space-y-6 text-center lg:text-left">
           <h2 class="text-5xl font-light text-brand-blue-dark">
             Why choose Easybank?
           </h2>
@@ -162,9 +166,9 @@
         </div>
 
 
-        <ul class="grid grid-cols-4 gap-8 my-16">
-          <li class="space-y-6">
-            <img src="./images/icon-api.svg" class="w-auto h-26" alt="">
+        <ul class="grid grid-cols-1 gap-8 my-16 md:grid-cols-2 lg:grid-cols-4">
+          <li class="space-y-6 text-center lg:text-left">
+            <img src="./images/icon-api.svg" class="w-auto mx-auto h-26 lg:mx-0" alt="">
             <h3 class="text-4xl font-light text-brand-blue-dark">
               Online Banking
             </h3>
@@ -173,8 +177,8 @@
             </p>
           </li>
 
-          <li class="space-y-6">
-            <img src="./images/icon-api.svg" class="w-auto h-26" alt="">
+          <li class="space-y-6 text-center lg:text-left">
+            <img src="./images/icon-api.svg" class="w-auto mx-auto h-26 lg:mx-0" alt="">
             <h3 class="text-4xl font-light text-brand-blue-dark">
               Online Banking
             </h3>
@@ -183,8 +187,8 @@
             </p>
           </li>
 
-          <li class="space-y-6">
-            <img src="./images/icon-api.svg" class="w-auto h-26" alt="">
+          <li class="space-y-6 text-center lg:text-left">
+            <img src="./images/icon-api.svg" class="w-auto mx-auto h-26 lg:mx-0" alt="">
             <h3 class="text-4xl font-light text-brand-blue-dark">
               Online Banking
             </h3>
@@ -193,8 +197,8 @@
             </p>
           </li>
 
-          <li class="space-y-6">
-            <img src="./images/icon-api.svg" class="w-auto h-26" alt="">
+          <li class="space-y-6 text-center lg:text-left">
+            <img src="./images/icon-api.svg" class="w-auto mx-auto h-26 lg:mx-0" alt="">
             <h3 class="text-4xl font-light text-brand-blue-dark">
               Online Banking
             </h3>
@@ -208,13 +212,33 @@
   </section>
 
 
-  <section class="py-24 bg-brand-grey-light">
+  <section class="py-16 lg:py-24 bg-brand-grey-light">
     <div class="container">
-      <h2 class="text-5xl font-light text-brand-blue-dark">
+      <h2 class="text-4xl font-light text-center lg:text-5xl text-brand-blue-dark lg:text-left">
         Latest Articles
       </h2>
 
-      <div class="grid grid-cols-4 gap-4 pt-12">
+      <div class="grid grid-cols-1 gap-12 pt-12 lg:gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="news-card">
+          <div class="news-card__image">
+            <img src="./images/image-currency.jpg" alt="">
+          </div>
+
+          <div class="news-card__content">
+            <p class="news-card__author">
+              By Clare Robinson
+            </p>
+
+            <h3 class="news-card__title">
+              Recieve money in any currency with no fees
+            </h3>
+
+            <p class="news-card__text">
+              The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...
+            </p>
+          </div>
+        </div>
+
         <div class="news-card">
           <div class="news-card__image">
             <img src="./images/image-currency.jpg" alt="">
@@ -239,13 +263,14 @@
   </section>
 
 
+
   <footer class="py-12 bg-brand-blue-dark">
     <div class="container">
-      <div class="grid grid-cols-12 gap-8">
-        <div class="flex flex-col justify-between col-span-3">
-          <img src="./images/footer-logo.svg" class="object-cover w-48 h-auto" alt="">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
+        <div class="flex flex-col justify-between space-y-8 lg:col-span-3 lg:space-y-0">
+          <img src="./images/footer-logo.svg" class="object-cover w-48 h-auto mx-auto lg:mx-0" alt="">
 
-          <div class="flex space-x-4">
+          <div class="flex justify-center space-x-4 lg:justify-start">
             <img src="./images/icon-facebook.svg" class="w-6 h-auto" alt="">
             <img src="./images/icon-youtube.svg" class="w-6 h-auto" alt="">
             <img src="./images/icon-twitter.svg" class="w-6 h-auto" alt="">
@@ -254,8 +279,8 @@
           </div>
         </div>
 
-        <div class="col-span-6">
-          <div class="flex space-x-16 font-light">
+        <div class="lg:col-span-6">
+          <div class="flex flex-col items-center space-y-4 font-light text-center lg:flex-row lg:space-y-0 lg:space-x-16 lg:items-start lg:text-left">
             <ul class="space-y-4">
               <li class="text-white">
                 About us
@@ -283,29 +308,20 @@
         </div>
 
 
-        <div class="flex flex-col justify-between col-span-3">
-          <div class="text-right">
+        <div class="flex flex-col justify-between lg:col-span-3">
+          <div class="text-center lg:text-right">
             <button class="button">
               Request Invite
             </button>
           </div>
 
-          <p class="text-right text-brand-grey-dark">
+          <p class="mt-8 text-center lg:text-right text-brand-grey-dark">
             &copy; Easybank. All rights reserved
           </p>
-
-
         </div>
       </div>
-
     </div>
 
-
   </footer>
-   -->
-
-
-
-
 </body>
 </html>
