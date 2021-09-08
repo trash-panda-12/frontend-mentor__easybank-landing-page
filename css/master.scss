@@ -1,6 +1,6 @@
 
 body {
-  @apply text-brand-blue-dark
+  @apply text-brand-blue-dark;
 }
 
 
@@ -9,7 +9,7 @@ body {
   @apply w-48 px-6 py-3 bg-gradient-to-br from-brand-green to-brand-blue rounded-full text-white transition-all;
 
   &:hover {
-    @apply shadow-inner;
+    @apply shadow-inner opacity-80;
   }
 }
 
@@ -21,16 +21,14 @@ body {
     height:100%;
     left: 0;
     top:0;
-
     background-image: url('../images/bg-intro-desktop.svg');
     background-repeat: no-repeat;
-
-    display:none
+    display:none;
+    pointer-events:none;
   }
 
   @screen lg {
     &:before {
-      object-fit: top;
       background-position: 200% 50%;
       background-size: 80vw auto;
       display:block
@@ -40,10 +38,10 @@ body {
 }
 
 .news-card {
-  @apply bg-white shadow-sm;
+  @apply bg-white shadow-sm block;
 
   &__image {
-    @apply relative w-full  h-52;
+    @apply relative w-full  h-52 block;
 
     img {
       @apply object-cover w-full h-full;
@@ -63,7 +61,7 @@ body {
   }
 
   &__text {
-    @apply text-sm font-light text-brand-grey-dark
+    @apply text-sm font-light text-brand-grey-dark;
   }
 
 }
@@ -74,16 +72,17 @@ body {
   @apply relative h-full overflow-hidden py-4;
 
   &__link {
-    @apply flex items-center h-full transition-all px-2;
+    @apply flex items-center h-full transition-all px-3;
   }
 
   &__underline {
-    @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-green to-brand-blue transition-all transform -translate-x-full;
+    @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-green to-brand-blue transition-all transform;
+    transform: translateX(-110%);
   }
 
   &:hover {
     .header-link__underline {
-      @apply translate-x-0
+      transform: translateX(0);
     }
   }
 
@@ -125,5 +124,13 @@ body {
     .line-1, .line-2, .line-3 {
       width:100%;
     }
+  }
+}
+
+.footer-link {
+  @apply text-white transition-colors;
+
+  &:hover {
+    @apply text-brand-green
   }
 }
